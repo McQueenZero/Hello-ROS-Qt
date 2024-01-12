@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="turtlesim" name="sim" type="turtlesim_node" output="screen" />
+    <node pkg="teleop" name="op" type="teleop_node" />
+</launch>

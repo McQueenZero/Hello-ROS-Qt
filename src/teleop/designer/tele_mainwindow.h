@@ -1,0 +1,153 @@
+/********************************************************************************
+** Form generated from reading UI file 'tele_mainwindow.ui'
+**
+** Created by: Qt User Interface Compiler version 5.12.8
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef TELE_MAINWINDOW_H
+#define TELE_MAINWINDOW_H
+
+#include <QtCore/QVariant>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QWidget>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_MainWindow
+{
+public:
+    QWidget *centralwidget;
+    QGridLayout *gridLayout;
+    QLabel *label_2;
+    QLabel *label;
+    QLabel *label_3;
+    QSlider *horizontalSlider;
+    QPushButton *pushButton;
+    QSlider *horizontalSlider_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_4;
+    QMenuBar *menubar;
+    QStatusBar *statusbar;
+
+    void setupUi(QMainWindow *MainWindow)
+    {
+        if (MainWindow->objectName().isEmpty())
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+        centralwidget = new QWidget(MainWindow);
+        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        gridLayout = new QGridLayout(centralwidget);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label_2, 0, 0, 1, 1);
+
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label, 0, 1, 1, 1);
+
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label_3, 0, 2, 1, 1);
+
+        horizontalSlider = new QSlider(centralwidget);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setMinimum(1);
+        horizontalSlider->setMaximum(100);
+        horizontalSlider->setSliderPosition(50);
+        horizontalSlider->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalSlider, 1, 0, 1, 1);
+
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        gridLayout->addWidget(pushButton, 1, 1, 1, 1);
+
+        horizontalSlider_2 = new QSlider(centralwidget);
+        horizontalSlider_2->setObjectName(QString::fromUtf8("horizontalSlider_2"));
+        horizontalSlider_2->setMinimum(1);
+        horizontalSlider_2->setMaximum(100);
+        horizontalSlider_2->setSliderPosition(50);
+        horizontalSlider_2->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(horizontalSlider_2, 1, 2, 1, 1);
+
+        pushButton_3 = new QPushButton(centralwidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        gridLayout->addWidget(pushButton_3, 2, 0, 1, 1);
+
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        gridLayout->addWidget(pushButton_2, 2, 1, 1, 1);
+
+        pushButton_4 = new QPushButton(centralwidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+
+        gridLayout->addWidget(pushButton_4, 2, 2, 1, 1);
+
+        MainWindow->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(MainWindow);
+        menubar->setObjectName(QString::fromUtf8("menubar"));
+        MainWindow->setMenuBar(menubar);
+        statusbar = new QStatusBar(MainWindow);
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        MainWindow->setStatusBar(statusbar);
+
+        retranslateUi(MainWindow);
+        QObject::connect(horizontalSlider, SIGNAL(valueChanged(int)), label_2, SLOT(setNum(int)));
+        QObject::connect(horizontalSlider_2, SIGNAL(valueChanged(int)), label_3, SLOT(setNum(int)));
+
+        QMetaObject::connectSlotsByName(MainWindow);
+    } // setupUi
+
+    void retranslateUi(QMainWindow *MainWindow)
+    {
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "TeleOp", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "\347\272\277\351\200\237\345\272\246", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Twist:(x,y,z,phi,theta,psi)", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "\350\247\222\351\200\237\345\272\246", nullptr));
+        pushButton->setText(QApplication::translate("MainWindow", "W", nullptr));
+#ifndef QT_NO_SHORTCUT
+        pushButton->setShortcut(QApplication::translate("MainWindow", "W", nullptr));
+#endif // QT_NO_SHORTCUT
+        pushButton_3->setText(QApplication::translate("MainWindow", "A", nullptr));
+#ifndef QT_NO_SHORTCUT
+        pushButton_3->setShortcut(QApplication::translate("MainWindow", "A", nullptr));
+#endif // QT_NO_SHORTCUT
+        pushButton_2->setText(QApplication::translate("MainWindow", "S", nullptr));
+#ifndef QT_NO_SHORTCUT
+        pushButton_2->setShortcut(QApplication::translate("MainWindow", "S", nullptr));
+#endif // QT_NO_SHORTCUT
+        pushButton_4->setText(QApplication::translate("MainWindow", "D", nullptr));
+#ifndef QT_NO_SHORTCUT
+        pushButton_4->setShortcut(QApplication::translate("MainWindow", "D", nullptr));
+#endif // QT_NO_SHORTCUT
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class MainWindow: public Ui_MainWindow {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // TELE_MAINWINDOW_H

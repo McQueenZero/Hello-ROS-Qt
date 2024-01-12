@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>teleop</name>
+  <version>0.5.0</version>
+  <description>
+    teleop is a tool made for learning ROS-Qt communication.
+  </description>
+  <maintainer email="minkun_zhao@foxmail.com">mcqueen-zero</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>qtbase5-dev</build_depend>
+  <build_depend>roscpp</build_depend>
+
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>libqt5-core</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+</package>
