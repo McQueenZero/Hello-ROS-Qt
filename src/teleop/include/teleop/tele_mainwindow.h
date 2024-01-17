@@ -154,10 +154,11 @@ public:
 };
 
 namespace Tele {
-    class MainWindow: public Tele_MainWindow, public QMainWindow {
+    class MainWindow: public QMainWindow, public Tele_MainWindow {
         /** 派生类Ui::MainWindow \n
-         * (多重)继承于Ui_MainWindow和QMainWindow
+         * (多重)继承于QMainWindow和Ui_MainWindow
          * */
+        Q_OBJECT
     public:
         double k_;
         double v_lx_, v_az_; // velocity of linear x-axis, angular z-axis
@@ -172,17 +173,17 @@ namespace Tele {
         QShortcut* right_sc_;
         QTimer* update_timer_;
 
-
         /* 构造函数 */
         explicit MainWindow(const ros::NodeHandle &nh);
 
         /* 信号(signal)函数 */
         void connectUi();
 
-    private:
+    private slots:
         /* 槽(slot)函数 */
         void pubTwist(double k_lx, double k_az);
 
+    private:
         /* 回调函数 */
         void colorCallback(const turtlesim::ColorConstPtr &color);
         void poseCallback(const turtlesim::PoseConstPtr &pose);
